@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-
+<div id="res">Loading...</div>
+<script>
+var xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200){
+  document.querySelector("#res").innerHTML=this.response;
+}};
+xhttp.open("GET","logins.db",1);
+xhttp.send();
+</script>
 </body>
 </html>
